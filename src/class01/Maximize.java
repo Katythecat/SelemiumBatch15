@@ -1,16 +1,20 @@
-package class1.Assignments;
+package class01;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Amazon {
+public class Maximize {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
+        //create an instance of webdriver
         WebDriver driver=new ChromeDriver();
-        driver.navigate().to("https://www.amazon.com/");
+        // go to google.com
+        driver.get("https://www.google.com/");
+        // maximize the window
         driver.manage().window().maximize();
-        System.out.println(driver.getCurrentUrl());
-        System.out.println(driver.getTitle());
+        //full screen
+        driver.manage().window().fullscreen();
+        //close
         driver.close();
 
     }
