@@ -1,0 +1,43 @@
+We can create Xpath
+1. start with //
+
+
+
+
+
+Example
+1.//input[@name='username']
+--> input is tag name
+--> we use @ when we see attirbute to refer
+2.//input[@type='submit'and @value='Login']
+--> if the Xpath that is created still have many elements in that particular page
+--> we can use   and   to make it unique
+
+
+
+
+link:
+1.//a[text()='Features']
+--> Features is a text in that link and we should to change from " " to ' '
+--> for text() we use with =
+--> we can use like this if using contains and it has manys elements in that page
+
+2.//a[contains(text(),'Features')] --> recommended to use contains
+--> for contains( , ) inside we put 2 parameter and parameter separate with ,
+
+
+button:
+1.//button[@type='button' and @class='btn']
+2.//button[contains(text(),'Sign up'] --> recommended
+3.
+
+inherite:
+1.//div[@class='dropdown']//button[@type='button' and class='btn btn-secondary dropdown-toggle'
+    and @id='dropdownMenuButton']
+--> first we try to writh button xpath but still have many elements even we use  and  to find
+    a unique element so we need to use the upper element that is parent for button
+    which is div[@class='dropdown']
+
+How to customize xpath
+1.//a[@text()='test2 test2']//parent::td[@class='datalistrow']
+//prededing-sibling::td[@class='datalistrow']//input[@name='contact_id']
