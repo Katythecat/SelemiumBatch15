@@ -18,11 +18,21 @@ public class XpathTask {
         driver.findElement(By.xpath("//input[@id='sum1']")).sendKeys("5");
         driver.findElement(By.xpath("//input[@id='sum2']")).sendKeys("15");
         driver.findElement(By.xpath("//button[text()='Get Total']")).click();
-        List<WebElement> buttons=driver.findElements(By.xpath("//button[contains(text(),'Get Total')]"));
+
+        WebElement type=driver.findElement(By.xpath("//button[contains(text(),'Get Total')]"));
+        System.out.println(type.getAttribute("type"));
+
+
+
+
+
+        /*List<WebElement> buttons=driver.findElements(By.xpath("//button[contains(text(),'Get Total')]"));
         for(WebElement button:buttons){
             String value=button.getAttribute("type");
             System.out.println(value);
-        }
+        }*/
+
+
 
 
 
