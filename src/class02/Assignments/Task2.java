@@ -37,7 +37,7 @@ public class Task2 {
         driver.findElement(By.name("websubmit")).click();
         Thread.sleep(5000);
 
-        driver.close();
+        //driver.close();
 
     }
 }
