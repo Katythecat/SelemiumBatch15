@@ -13,7 +13,7 @@ public class XpathTask {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/basic-first-form-demo.php");
-        driver.findElement(By.xpath("//input[contains(@placeholder,'Please enter')]")).sendKeys("Hello Selenium");
+        driver.findElement(By.xpath("//*[contains(@placeholder,'Please enter')]")).sendKeys("Hello Selenium");
         driver.findElement((By.xpath("//button[text()='Show Message']"))).click();
         driver.findElement(By.xpath("//input[@id='sum1']")).sendKeys("5");
         driver.findElement(By.xpath("//input[@id='sum2']")).sendKeys("15");

@@ -19,8 +19,6 @@ public class LocatingElements {
         driver.findElement(By.linkText("Create new account")).click();
         driver.findElement(By.partialLinkText("password?")).click();
 
-
-
         driver.quit();
 
 
