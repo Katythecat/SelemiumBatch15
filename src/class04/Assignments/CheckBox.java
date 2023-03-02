@@ -11,17 +11,18 @@ public class CheckBox {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/basic-checkbox-demo.php");
+
         WebElement checkBoxBtn=driver.findElement(By.xpath("//input[@id='isAgeSelected']"));
-        boolean checkBox=checkBoxBtn.isSelected();
-        System.out.println(checkBox);
+        boolean checkBoxes=checkBoxBtn.isSelected();
+        System.out.println("Is checked box selected? "+checkBoxes);
+        if(!checkBoxes){
+            checkBoxBtn.click();
+        }
+        checkBoxes=checkBoxBtn.isSelected();
+        System.out.println("Is checked box selected? "+checkBoxes);
 
-        checkBoxBtn.click();
-
-        checkBox=checkBoxBtn.isSelected();
-        System.out.println(checkBox);
 
 
 
-        Thread.sleep(2000);
     }
 }

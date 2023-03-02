@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  int select = 4;
+            WebElement c;
+            if (select == 1) {
+                c = driver.findElement(By.cssSelector("input[value='Option-1']"));
+                if (!c.isSelected()) {
+                    c.click();
+                }
+            } else if (select == 2) {
+                c = driver.findElement(By.cssSelector("input[value='Option-2']"));
+                if (!c.isSelected()) {
+                    c.click();
+                }
+            } else if (select == 3) {
+                c = driver.findElement(By.cssSelector("input[value='Option-3']"));
+                if (!c.isSelected()) {
+                    c.click();
+                }
+            } else if (select == 4) {
+                c = driver.findElement(By.cssSelector("input[value='Option-4']"));
+                if (!c.isSelected()) {
+                    c.click();
+                }
+                Thread.sleep(1500);
+            } else {
+                System.out.println("Invalid");
+            }*/
