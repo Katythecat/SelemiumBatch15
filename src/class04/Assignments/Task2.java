@@ -17,10 +17,15 @@ public class Task2 {
         List<WebElement> option = driver.findElements(By.cssSelector("input[class *='cb1']"));
         for (WebElement check : option) {
             String checkbox = check.getAttribute("value");
-            if(checkbox.equals("Option-4")){
+            if (checkbox.equals("Option-4") && check.isEnabled() && !check.isSelected()) {
                 check.click();
             }
         }
     }
-
 }
+
+
+
+
+
+

@@ -12,7 +12,7 @@ public class RedioButton {
         driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/basic-radiobutton-demo.php");
 
-        //click on radio button
+        //click on radio button male
         //driver.findElement(By.xpath("//label[@class='radio-inline']/input[@name='optradio' and @value='Male']"))
         WebElement maleButton=driver.findElement(By.cssSelector("input[value='Male']"));
 

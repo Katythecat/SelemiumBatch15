@@ -9,9 +9,9 @@ import java.util.List;
 
 public class RadioButton2 {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/basic-radiobutton-demo.php");
         List<WebElement> radioBtns = driver.findElements(By.xpath("//input[@name='ageGroup']"));
         //iterator over the list to see ur desired one

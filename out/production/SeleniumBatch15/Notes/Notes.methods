@@ -1,0 +1,47 @@
+Methods:
+
+1) get methods
+2) conditional methods
+3) Browser methods
+4) Navigational methods
+5) wait methods
+
+
+get methods  - we can ues these methods through webdriver instance
+----------
+get(url)            - url
+getTitle()          - use for validation
+getCurrentURL()     - use for compare url with .get() use for validation
+getPageSource()     - not useful
+getWindowHandle()   - return single window ID this Id also dynamic changes every time
+getwindowHandles()  - return multiple windows ID
+
+
+conditional commands - access these commands through WebElement
+----------------------
+Returns true/false ( boolean values)
+
+isEnabled()--> check if the radio button can be selected or not if not selectable usually it is greyed out.
+isDisplayed() --> checks if the webElment is displayed on the page or not
+isSelected()-->checks if the radio button is selected or not (return true if selected)isSelected()
+
+Revise WebElement commands
+WebElement Commands:->access commans through Webelement
+
+1. clear()--->          it deletes the text in the text box
+2. getText()--->        get the inner text
+3. getattribute()-->    get the value of a particular attribute
+4. isselected()-->      to check if the element is checked (clicked ) ir not
+5. isdisplayed() -->    is it there on the screen or not
+6. isEnabled()  --->    is it clickable or are we able to send text to it incase of a text box
+
+
+
+browser methods
+---------------
+close()
+- close single browser window at the time
+- which browser that open through driver instance
+by .get() the close() will notice that and close it
+
+quit()

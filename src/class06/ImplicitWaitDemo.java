@@ -1,20 +1,23 @@
-package class02.Assignments;
+package class06;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Task2 {
-    public static void main(String[] args) throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+public class ImplicitWaitDemo {
+    public static void main(String[] args) {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
-
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.facebook.com/");
         driver.findElement(By.linkText("Create new account")).click();
-        Thread.sleep(3000);
+
         driver.findElement(By.name("firstname")).sendKeys("Leo");
         driver.findElement(By.name("lastname")).sendKeys("Lovefish");
         driver.findElement(By.name("reg_email__")).sendKeys("leo@gmail.com");
@@ -33,11 +36,8 @@ public class Task2 {
         male.click();
 
 
-        Thread.sleep(5000);
-        driver.findElement(By.name("websubmit")).click();
-        Thread.sleep(5000);
 
-        //driver.close();
+        driver.findElement(By.name("websubmit")).click();
 
     }
 }

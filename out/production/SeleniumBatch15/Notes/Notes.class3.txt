@@ -101,7 +101,7 @@ d.by partial text value        //tagname[contains(text(), 'partial text value')]
 
 we learned two more methods
 
-1..clear()  --> it clears the text box
+1. .clear()  --> it clears the text box
 2. .getText() --> it gets the text from the webElment (if no text is present it will print empty)
 
 
@@ -196,8 +196,8 @@ b.Absolute
 
 
 
-1..clear()---> it deletes the text in the text box
-2.getText()--> gets the text if there is any
+1. .clear()---> it deletes the text in the text box
+2. .getText()--> gets the text if there is any
 
 
 The locator Tagname:
