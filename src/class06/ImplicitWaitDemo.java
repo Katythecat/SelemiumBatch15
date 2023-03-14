@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ImplicitWaitDemo {
     public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -34,9 +35,7 @@ public class ImplicitWaitDemo {
 
         WebElement male= driver.findElement(By.xpath("//input[@value='2']"));
         male.click();
-
-
-
+        
         driver.findElement(By.name("websubmit")).click();
 
     }

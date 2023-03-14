@@ -6,13 +6,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 
 public class WindowHandleDemo {
     public static void main(String[] args) {
+        System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://accounts.google.com/v3/signin/identifier?dsh=S235366521%3A1678243105674477&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHdOvog3wmr_8f9PP_fnU0-OK5rd4VySXVeCRfK4HMg-IuuE_eSVo9TNWT1bmnXCl0q-DtZ_0w");
         driver.findElement(By.xpath("//a[text()='Help']")).click();
         driver.findElement(By.xpath("//a[text()='Privacy']")).click();
