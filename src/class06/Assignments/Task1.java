@@ -23,6 +23,9 @@ public class Task1 {
         WebElement finishBtn = driver.findElement(By.xpath("//div[@id='finish']//h4"));
         finishBtn.click();
 
+
+        //System.out.println("Is Hello World displayed? "+finishBtn.isDisplayed());
+
         if(finishBtn.getText().equalsIgnoreCase("Hello World!")){
             System.out.println(finishBtn.getText()+" Is displayed");
         }else{
